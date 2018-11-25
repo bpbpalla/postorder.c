@@ -63,35 +63,35 @@ void postorder(node_tree *root)
 {
 	if(root==NULL)
 		return;
-	Stack *s=createStack();
+	
 	node_tree *tmp;
 	while(1)
 	{
 		while(root!=NULL)
 		{
 			if(root->right!=NULL)
-				push(s,root->right);
-			push(s,root);
+				push(head,root->right);
+			push(head,root);
 			root=root->left;
 			}
 			if(isStackempty)
 				break;
-			root=pop(s);
-			if(isStackempty(s))
+			root=pop(head);
+			if(isStackempty(head))
 			{
 				printf("%d",root->data);
 				break;
 			}
-			tmp=pop(s);
+			tmp=pop(head);
 			if(tmp==root->right)
 			{
-				push(s,root);
+				push(head,root);
 				root=root->right;
 			}
 			else
 			{
 				printf("%d",root->data);
-				push(s,tmp);
+				push(head,tmp);
 				root=NULL
 			}
 			
