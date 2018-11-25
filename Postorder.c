@@ -61,6 +61,8 @@ return root;
 }
 void postorder(node_tree *root)
 {
+	printf("\n postorder:");
+	
 	if(root==NULL)
 		return;
 	
@@ -92,7 +94,7 @@ void postorder(node_tree *root)
 			{
 				printf("%d",root->data);
 				push(head,tmp);
-				root=NULL
+				root=NULL;
 			}
 			
 				
