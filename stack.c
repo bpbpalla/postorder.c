@@ -14,13 +14,13 @@ return head;
 
 void push(node *head,node_tree *node)
 {
-  insertfirst(head,node);
+  insertlast(head,node);
 
 }
 
 int pop(node *head)
 {
- return(deletefirst(head));
+ return(deletelast(head));
 }
 
 
